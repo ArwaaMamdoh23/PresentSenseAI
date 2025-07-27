@@ -10,6 +10,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      
       child: SafeArea(
         child: Column(
           children: [
@@ -41,13 +42,13 @@ class CustomDrawer extends StatelessWidget {
                 Navigator.pushNamed(context, '/instructions');
               },
             ),
-            ListTile(
-              leading: const Icon(Icons.help),
-              title: Text('Loading'.tr()), // Localize text
-              onTap: () {
-                Navigator.pushNamed(context, '/loading');
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.help),
+            //   title: Text('Loading'.tr()), // Localize text
+            //   onTap: () {
+            //     Navigator.pushNamed(context, '/loading');
+            //   },
+            // ),
             const Spacer(),
             ListTile(
               leading: const Icon(Icons.settings),

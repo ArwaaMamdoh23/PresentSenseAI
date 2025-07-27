@@ -167,7 +167,7 @@ SizedBox(height: 20),
                   Icon(Icons.email, color: Colors.white, size: 30),
                   SizedBox(width: 10),
                   Text(
-                    'contact@presentsense.com'.tr(), // Use .tr() for translation
+                    'presentsense7@gmail.com'.tr(), // Use .tr() for translation
                     style: TextStyle(color: Colors.white70, fontSize: screenWidth * 0.035),
                   ),
                 ],
@@ -179,7 +179,7 @@ SizedBox(height: 20),
                   Icon(Icons.phone, color: Colors.white, size: 30),
                   SizedBox(width: 10),
                   Text(
-                    '+1 800-123-4567'.tr(), // Use .tr() for translation
+                    '+2 01011007759'.tr(), // Use .tr() for translation
                     style: TextStyle(color: Colors.white70, fontSize: screenWidth * 0.035),
                   ),
                 ],

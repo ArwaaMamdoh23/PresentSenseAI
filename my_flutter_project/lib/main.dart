@@ -11,7 +11,7 @@ import 'Screens/SettingsPage.dart';
 import 'Screens/ProfilePage.dart';
 import 'Screens/ReportsPage.dart';
 import 'Screens/UploadVideo.dart';
-import 'Screens/Loading.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
         '/upload': (context) => UploadVideoPage(),
         '/aboutus': (context) => AboutUs(),
         '/instructions': (context) => Instructions(),
-        '/loading': (context) => LoadingScreen()
+        
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

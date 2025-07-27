@@ -1,0 +1,29 @@
+{
+  "detected_language": "en",
+  "dominant_emotion": "attentive",
+  "dominant_eye_contact": "Eye Contact",
+  "dominant_gesture_1": "Thumbs Up",
+  "dominant_gesture_2": "Open Palm",
+  "dominant_posture": "Slouching",
+  "emotion_feedback": "You appear attentive. Keep your facial expressions engaging.",
+  "gesture_1_meaning": "Encouragement",
+  "gesture_2_meaning": "Honesty",
+  "gesture_feedback": "Thumbs up shows encouragement and positivity.",
+  "grammar_feedback": "Good grammar! There are minor improvements that could be made.",
+  "grammar_score": 83,
+  "pace_feedback": "Your pace is perfect.",
+  "posture_feedback": "Try to stand up straight. Slouching can make you appear less confident.",
+  "posture_meaning": {
+    "Arms on Hips": "Confidence",
+    "Crossed Arms": "Defensive",
+    "Hands in Pockets": "Casual",
+    "Head Down": "Lack of confidence",
+    "Head Up": "Confidence",
+    "Leaning Back": "Relaxation",
+    "Leaning Forward": "Interest",
+    "Slouching": "Lack of confidence"
+  },
+  "pronunciation_feedback": "Excellent pronunciation! Your speech is very clear.",
+  "pronunciation_score": 97.80094623565674,
+  "speech_pace": 136.53764355593364
+}

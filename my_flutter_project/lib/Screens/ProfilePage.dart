@@ -4,7 +4,6 @@ import 'package:my_flutter_project/Screens/Instructions.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:my_flutter_project/Screens/HomePage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:file_picker/file_picker.dart';
 import 'dart:typed_data';
 import 'dart:convert';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -12,8 +11,6 @@ import '../widgets/custom_app_bar.dart';
 import '../widgets/background_wrapper.dart';
 import 'EditProfilePage.dart';
 import 'SettingsPage.dart';
-import 'package:my_flutter_project/AdminFolder/AdminDashboard.dart';
-import 'package:my_flutter_project/Screens/EditProfilePage.dart';
 import '../widgets/CustomDrawer.dart'; 
 
 class ProfilePage extends StatefulWidget {

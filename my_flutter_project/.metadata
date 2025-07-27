@@ -4,11 +4,7 @@
 # This file should be version controlled and should not be manually edited.
 
 version:
-<<<<<<< HEAD
   revision: "8defaa71a77c16e8547abdbfad2053ce3a6e2d5b"
-=======
-  revision: "b25305a8832cfc6ba632a7f87ad455e319dccce8"
->>>>>>> 12edd82cab7c6b53956693737f5bbe853d00fe15
   channel: "stable"
 
 project_type: app
@@ -17,49 +13,11 @@ project_type: app
 migration:
   platforms:
     - platform: root
-<<<<<<< HEAD
-      create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-      base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-    - platform: android
-      create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-      base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-    - platform: ios
-      create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-      base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-    - platform: linux
-      create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-      base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-    - platform: macos
       create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
       base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
     - platform: web
       create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
       base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-    - platform: windows
-      create_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-      base_revision: 8defaa71a77c16e8547abdbfad2053ce3a6e2d5b
-=======
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-    - platform: android
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-    - platform: ios
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-    - platform: linux
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-    - platform: macos
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-    - platform: web
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-    - platform: windows
-      create_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
-      base_revision: b25305a8832cfc6ba632a7f87ad455e319dccce8
->>>>>>> 12edd82cab7c6b53956693737f5bbe853d00fe15
 
   # User provided section
 

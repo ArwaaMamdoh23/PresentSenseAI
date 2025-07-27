@@ -254,9 +254,9 @@ def run_inference(frame):
     return posenet_model.signatures['serving_default'](**model_input)
 
 # Main video processing loop
-cap = cv2.VideoCapture("Videos/TedDutch.mp4")
+# cap = cv2.VideoCapture("Videos/TedDutch.mp4")
 # cap = cv2.VideoCapture("Videos/lolo presentation.mp4")
-# cap = cv2.VideoCapture("Videos/TedTalk.mp4")
+cap = cv2.VideoCapture("Videos/TedTalk.mp4")
 # cap = cv2.VideoCapture("Videos/TedChinese.mp4")
 
 # Set the resolution to high values (e.g., Full HD: 1920x1080)
@@ -380,17 +380,17 @@ if all_eye_contacts:
     print(f"Dominant Eye Contact: {dominant_eye_contact}")
 
 # Print posture counts with meanings
-print("\nPosture Count Summary:")
+# print("\nPosture Count Summary:")
 for posture, count in posture_counter.items():
     meaning = posture_meanings.get(posture, "Unknown Meaning")
-    print(f"{posture}: {count} times - Meaning: {meaning}")
+    # print(f"{posture}: {count} times - Meaning: {meaning}")
 
 # Print most repeated gestures with meaning
-print("\nMost Repeated Gestures with Meaning: ")
-print("\nGesture Summary:")
+# print("\nMost Repeated Gestures with Meaning: ")
+# print("\nGesture Summary:")
 for gesture, count in gesture_counter.items():
     meaning = gesture_to_body_language.get(gesture, "Unknown Meaning")
-    print(f"{gesture}: {count} times - Meaning: {meaning}")
+    # print(f"{gesture}: {count} times - Meaning: {meaning}")
     
     
 def extract_audio_from_video(video_file_path):
@@ -409,8 +409,8 @@ def extract_audio_from_video(video_file_path):
 
 # Specify your video file path
 # video_file_path = "Videos/lolo presentation.mp4"
-# video_file_path = "Videos/TedTalk.mp4"
-video_file_path = "Videos/TedDutch.mp4"
+video_file_path = "Videos/TedTalk.mp4"
+# video_file_path = "Videos/TedDutch.mp4"
 # video_file_path = "Videos/TedChinese.mp4"
 
 
@@ -418,7 +418,7 @@ video_file_path = "Videos/TedDutch.mp4"
 audio_file_path = extract_audio_from_video(video_file_path)
 
 # Print the generated audio file path
-print(f"Audio extracted and saved at: {audio_file_path}")
+# print(f"Audio extracted and saved at: {audio_file_path}")
 
 
 model = whisper.load_model("base")
@@ -431,7 +431,7 @@ waveform = waveform / max(abs(waveform))  # Normalize
 result = model.transcribe(audio=waveform)
 transcription = result["text"]
 detected_lang = result["language"]
-print("Transcription:", transcription)
+print("Transcription:", transcription, "\n")
 
 
 def correct_grammar(sentence, t5_model, tokenizer, max_length=512):
@@ -544,7 +544,7 @@ if pace_result is None:
 else:
     pace, transcribed_text, pace_feedback = pace_result
     if transcribed_text:
-        print("Transcription:", transcribed_text)
+        # print("Transcription:", transcribed_text, "\n")
         print(f"Your grammatical score was: {grammatical_score(transcribed_text, corrected_sentence)}/10")
         print("Speech Pace (WPM):", pace)
         print("Feedback:", pace_feedback)
@@ -963,29 +963,29 @@ print(f"Emotion Feedback: {emotion_feedback}")
 dominant_posture, posture_count = Counter(posture_counter).most_common(1)[0]
 posture_feedback = get_posture_feedback(dominant_posture)
 # Add posture analysis
-combined_feedback_report.append("\n--- Posture Analysis ---")
-if dominant_posture != "Unknown":
-    meaning = posture_meanings.get(dominant_posture, "Unknown Meaning")
-    combined_feedback_report.append(f"Dominant Posture: {dominant_posture} - Meaning: {meaning}")
-combined_feedback_report.append(f"Posture Feedback: {posture_feedback}")
+# combined_feedback_report.append("\n--- Posture Analysis ---")
+# if dominant_posture != "Unknown":
+#     meaning = posture_meanings.get(dominant_posture, "Unknown Meaning")
+#     combined_feedback_report.append(f"Dominant Posture: {dominant_posture} - Meaning: {meaning}")
+# combined_feedback_report.append(f"Posture Feedback: {posture_feedback}")
 
 
 
 dominant_gesture, gesture_count = Counter(gesture_counter).most_common(1)[0]
-gesture_feedback = get_gesture_feedback(dominant_gesture)
-# Add gesture analysis (top 2 most frequent)
-combined_feedback_report.append("\n--- Gesture Analysis ---")
-for gesture, count in Counter(gesture_counter).most_common(2):
-    if count > 0:
-        meaning = gesture_to_body_language.get(gesture, "Unknown Meaning")
-        combined_feedback_report.append(f"Dominant Gesture: {gesture} - Meaning: {meaning}")
+# gesture_feedback = get_gesture_feedback(dominant_gesture)
+# # Add gesture analysis (top 2 most frequent)
+# combined_feedback_report.append("\n--- Gesture Analysis ---")
+# for gesture, count in Counter(gesture_counter).most_common(2):
+#     if count > 0:
+#         meaning = gesture_to_body_language.get(gesture, "Unknown Meaning")
+#         combined_feedback_report.append(f"Dominant Gesture: {gesture} - Meaning: {meaning}")
 
-combined_feedback_report.append(f"Gesture Feedback: {gesture_feedback}")
+# combined_feedback_report.append(f"Gesture Feedback: {gesture_feedback}")
 
 
 # Add speech analysis feedback (grammar, pace, fluency, pronunciation)
-combined_feedback_report.append("\n--- Speech Analysis ---")
-combined_feedback_report.append(f"Detected Language: {detected_lang}")
+# combined_feedback_report.append("\n--- Speech Analysis ---")
+# combined_feedback_report.append(f"Detected Language: {detected_lang}")
 
 # Initialize all variables needed for the feedback report
 grammar_percentage = (grammar_score / 10) * 100 if grammar_score is not None else 0
@@ -1038,9 +1038,9 @@ combined_feedback_report.append(f"Detected Language: {detected_lang if detected_
 # Grammar Section
 combined_feedback_report.append("\n --- Grammar Analysis ---")
 combined_feedback_report.append(f"Grammar Score: {grammar_score}/10 ({grammar_percentage}%)")
-combined_feedback_report.append(f"Original Text: {transcription if transcription else 'No transcription available'}")
-combined_feedback_report.append(f"Corrected Text (T5): {corrected_sentence if corrected_sentence else 'No correction available'}")
-combined_feedback_report.append(f"Corrected Text (LanguageTool): {corrected_lt_sentence if corrected_lt_sentence else 'No correction available'}")
+# combined_feedback_report.append(f"Original Text: {transcription if transcription else 'No transcription available'}")
+# combined_feedback_report.append(f"Corrected Text (T5): {corrected_sentence if corrected_sentence else 'No correction available'}")
+# combined_feedback_report.append(f"Corrected Text (LanguageTool): {corrected_lt_sentence if corrected_lt_sentence else 'No correction available'}")
 combined_feedback_report.append(f"Grammar Feedback: {get_grammar_feedback(grammar_score) if grammar_score is not None else 'No grammar analysis available'}")
 
 # Pace Section
@@ -1063,29 +1063,47 @@ combined_feedback_report.append(f"Pronunciation Feedback: {pronunciation_feedbac
 # Body Language Analysis
 combined_feedback_report.append("\n--- Body Language Analysis ---")
 
-# Posture Section
-combined_feedback_report.append("\n --- Posture Analysis ---")
-if posture_counter:
-    for posture, count in Counter(posture_counter).most_common():
-        if count > 0:
-            meaning = posture_meanings.get(posture, "Unknown Meaning")
-            combined_feedback_report.append(f"Posture: {posture} - Count: {count} - Meaning: {meaning}")
-else:
-    combined_feedback_report.append("No posture data available")
-combined_feedback_report.append(f"Posture Score: {posture_percentage}%")
+combined_feedback_report.append("\n--- Posture Analysis ---")
+if dominant_posture != "Unknown":
+    meaning = posture_meanings.get(dominant_posture, "Unknown Meaning")
+    combined_feedback_report.append(f"Dominant Posture: {dominant_posture} - Meaning: {meaning}")
 combined_feedback_report.append(f"Posture Feedback: {posture_feedback}")
 
-# Gesture Section
-combined_feedback_report.append("\n --- Gesture Analysis ---")
-if gesture_counter:
-    for gesture, count in Counter(gesture_counter).most_common():
-        if count > 0:
-            meaning = gesture_to_body_language.get(gesture, "Unknown Meaning")
-            combined_feedback_report.append(f"Gesture: {gesture} - Count: {count} - Meaning: {meaning}")
-else:
-    combined_feedback_report.append("No gesture data available")
-combined_feedback_report.append(f"Gesture Score: {gesture_percentage}%")
+
+gesture_feedback = get_gesture_feedback(dominant_gesture)
+# Add gesture analysis (top 2 most frequent)
+combined_feedback_report.append("\n--- Gesture Analysis ---")
+for gesture, count in Counter(gesture_counter).most_common(2):
+    if count > 0:
+        meaning = gesture_to_body_language.get(gesture, "Unknown Meaning")
+        combined_feedback_report.append(f"Dominant Gesture: {gesture} - Meaning: {meaning}")
+
 combined_feedback_report.append(f"Gesture Feedback: {gesture_feedback}")
+
+
+# # Posture Section
+# combined_feedback_report.append("\n --- Posture Analysis ---")
+# if posture_counter:
+#     for posture, count in Counter(posture_counter).most_common():
+#         if count > 0:
+#             meaning = posture_meanings.get(posture, "Unknown Meaning")
+#             combined_feedback_report.append(f"Posture: {posture} - Count: {count} - Meaning: {meaning}")
+# else:
+#     combined_feedback_report.append("No posture data available")
+# combined_feedback_report.append(f"Posture Score: {posture_percentage}%")
+# combined_feedback_report.append(f"Posture Feedback: {posture_feedback}")
+
+# # Gesture Section
+# combined_feedback_report.append("\n --- Gesture Analysis ---")
+# if gesture_counter:
+#     for gesture, count in Counter(gesture_counter).most_common():
+#         if count > 0:
+#             meaning = gesture_to_body_language.get(gesture, "Unknown Meaning")
+#             combined_feedback_report.append(f"Gesture: {gesture} - Count: {count} - Meaning: {meaning}")
+# else:
+#     combined_feedback_report.append("No gesture data available")
+# combined_feedback_report.append(f"Gesture Score: {gesture_percentage}%")
+# combined_feedback_report.append(f"Gesture Feedback: {gesture_feedback}")
 
 # Emotion and Eye Contact Section
 combined_feedback_report.append("\n --- Emotional Analysis ---")

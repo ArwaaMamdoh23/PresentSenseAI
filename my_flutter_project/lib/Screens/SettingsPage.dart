@@ -23,7 +23,7 @@ Widget build(BuildContext context) {
       child: Column(
         children: [
           // Add padding to push the "Settings" text below the AppBar
-          const SizedBox(height: kToolbarHeight + 20),  // Add more padding for extra space below AppBar
+          const SizedBox(height: kToolbarHeight + 40),  // Add more padding for extra space below AppBar
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
             child: Text(
