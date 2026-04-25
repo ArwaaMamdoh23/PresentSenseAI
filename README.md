@@ -41,6 +41,7 @@ Full project documentation is available in the `docs/` folder:
 - SRS (Software Requirements Specification)
 - SDD (Software Design Document)
 - Research Paper
+- System Demo (video available in `docs/technical/demo.mp4`)
 
 ---
 
