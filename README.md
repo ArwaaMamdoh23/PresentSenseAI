@@ -27,11 +27,20 @@ Built with Flutter, Flask API, AWS, and AI models for speech and computer vision
 
 ## How It Works
 
-1. User uploads a presentation video
-2. Flutter app sends it to Flask backend
-3. Backend processes speech + video frames
-4. AI models analyze performance
-5. Feedback is returned to the app
+1. User uploads a presentation video  
+2. Flutter app sends it to Flask backend  
+3. Backend processes speech + video frames  
+4. AI models analyze performance  
+5. Feedback is returned to the app  
+
+---
+
+## Documentation
+
+Full project documentation is available in the `docs/` folder:
+- SRS (Software Requirements Specification)
+- SDD (Software Design Document)
+- Research Paper
 
 ---
 
